@@ -29,8 +29,8 @@ void setup() {
 
   M5.Lcd.println("Connected");
 
-  OscWiFi.publish(HOST, PORT, "/1/gyro", gyroX, gyroY, gyroZ);
-  OscWiFi.publish(HOST, PORT, "/1/accel", accX, accY, accZ);
+  OscWiFi.publish(HOST, PORT, BASE_PATH "/gyro", gyroX, gyroY, gyroZ);
+  OscWiFi.publish(HOST, PORT, BASE_PATH "/accel", accX, accY, accZ);
 }
 
 void loop() {

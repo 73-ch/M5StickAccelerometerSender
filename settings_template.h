@@ -9,4 +9,6 @@
 
 #define PORT 3333
 
+#define BASE_PATH "/1"
+
 #endif
