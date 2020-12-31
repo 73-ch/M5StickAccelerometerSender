@@ -1,5 +1,5 @@
-#include <ArduinoOSC.h>
 #include <M5StickC.h>
+#include <ArduinoOSC.h>
 
 #include "settings.h"
 
@@ -19,12 +19,14 @@ void setup() {
   M5.begin();
   M5.IMU.Init();
 
+  M5.Axp.ScreenBreath(7);
+
   // WiFi stuff
   WiFi.begin(SSID, PASS);
+  M5.Lcd.println("Connecting");
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    M5.Lcd.println("Connecting");
   }
 
   M5.Lcd.println("Connected");
